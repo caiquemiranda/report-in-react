@@ -1,44 +1,24 @@
 import styled from 'styled-components';
+import logoImg from '../assets/logo.png'; 
 
 const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  /* Se preferir a logo no centro da folha, troque 'flex-start' por 'center' */
+  justify-content: flex-start; 
+  margin-bottom: 0px;
+  padding-top: 0px;
 `;
 
-const LogoArea = styled.div`
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-const PlaceholderLogo = styled.div`
-  /* Substitua por uma tag <img /> quando tiver a logo real */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #1f6fa8;
-  font-weight: bold;
-  font-size: 14px;
-`;
-
-const TitleArea = styled.div`
-  width: 75%;
-  text-align: center;
-  padding-right: 25%; /* Para manter o texto estritamente no centro */
+const LogoImage = styled.img`
+  /* Aumentamos significativamente o tamanho. Ajuste este número para mais ou para menos se precisar */
+  max-height: 60px; 
+  max-width: 100%;
+  object-fit: contain;
 `;
 
 export const ReportHeader = () => (
   <HeaderContainer>
-    <LogoArea>
-      <PlaceholderLogo>
-        <span style={{ fontSize: '30px' }}>📊</span>
-        IBSystems
-        <span style={{ fontSize: '10px', color: '#666', fontWeight: 'normal' }}>Intelligent Building</span>
-      </PlaceholderLogo>
-    </LogoArea>
-    <TitleArea>
-    </TitleArea>
+    <LogoImage src={logoImg} alt="Logo" />
   </HeaderContainer>
 );
