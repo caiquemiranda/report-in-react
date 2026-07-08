@@ -1,6 +1,18 @@
 {
   "id": "relatorio-12345",
   "dataEmissao": "12/06/2020",
+  "indice": [
+    { "titulo": "INTRODUÇÃO", "pagina": 3, "level": 1 },
+    { "titulo": "EQUIPE ENVOLVIDA", "pagina": 4, "level": 1 },
+    { "titulo": "SERVIÇOS EXECUTADOS", "pagina": 5, "level": 1 },
+    { "titulo": "1.1 Testes de dispositivos", "pagina": 5, "level": 2 },
+    { "titulo": "1.2 Manutenções Corretivas", "pagina": 5, "level": 2 },
+    { "titulo": "SERVIÇOS PROGRAMADOS - FEVEREIRO 2024", "pagina": 38, "level": 1 },
+    { "titulo": "OCORRÊNCIAS RELEVANTES", "pagina": 39, "level": 1 },
+    { "titulo": "CONSIDERAÇÕES GERAIS", "pagina": 48, "level": 1 },
+    { "titulo": "ANEXO I", "pagina": 51, "level": 1 },
+    { "titulo": "ANEXO II", "pagina": 52, "level": 1 }
+  ],
   "paineis": [
     {
       "equipment": "SIMPLEX 4010ES / PN-04",
@@ -44,5 +56,43 @@
       "images": { "img1": "/imgs/pn-05/foto1.png", "img2": "/imgs/pn-05/foto2.png" },
       "observations": "Painel em perfeito estado de funcionamento."
     }
+  ],
+  "servicos": {
+    "introducao": "Faz parte do escopo da IBSystems a limpeza e testes dos dispositivos e garantir a integridade e funcionamento dos laços e painéis. Segue abaixo os serviços realizados no referido mês com os seus respectivos quantitativos:",
+    "preventiva": "Foram executadas a preventiva em 18 dispositivos no mês.",
+    "corretiva": "Foram executadas 12 manutenções corretivas no mês (Vide a sessão Ocorrências Relevantes).",
+    "chamadaTabela": "Na tabela a seguir é possível verificar com mais detalhes a descrição dos dispositivos verificados / testados no período e em anexo o relatório de testes do TSW (Anexo II):",
+    "dispositivosTestados": [
+      { "numero": 1, "point": "2:M1-114-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT05", "vc": "", "data": "24/fev" },
+      { "numero": 2, "point": "2:M1-112-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT03", "vc": "", "data": "24/fev" },
+      { "numero": 3, "point": "2:M1-113-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT04", "vc": "", "data": "24/fev" },
+      { "numero": 4, "point": "2:M1-110-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT01", "vc": "", "data": "24/fev" },
+      { "numero": 5, "point": "2:M1-111-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT02", "vc": "", "data": "24/fev" },
+      { "numero": 6, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 7, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 8, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 9, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 10, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 11, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 12, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 13, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 14, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 15, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 16, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 17, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 18, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 19, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 20, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 21, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 22, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 23, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 24, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 25, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 26, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 27, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 28, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 29, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
+      { "numero": 30, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" }
   ]
+ }
 }
