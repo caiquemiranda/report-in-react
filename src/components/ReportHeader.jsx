@@ -3,18 +3,17 @@ import logoImg from '../assets/logo.png';
 
 const HeaderContainer = styled.header`
   display: flex;
-  align-items: center;
-  /* Se preferir a logo no centro da folha, troque 'flex-start' por 'center' */
+  align-items: flex-start; /* Força a logo para o topo absoluto do container */
   justify-content: flex-start; 
-  margin-bottom: 0px;
-  padding-top: 0px;
+  margin-bottom: 15px; /* Reduzido de 30px para puxar a tabela para cima */
 `;
 
 const LogoImage = styled.img`
-  /* Aumentamos significativamente o tamanho. Ajuste este número para mais ou para menos se precisar */
-  max-height: 60px; 
+  max-height: 50px; /* Tamanho ajustado para proporção ideal */
   max-width: 100%;
   object-fit: contain;
+  /* Margem negativa opcional para colar a logo um pouco mais à esquerda caso o padding da página seja grande */
+  margin-left: -5px; 
 `;
 
 export const ReportHeader = () => (

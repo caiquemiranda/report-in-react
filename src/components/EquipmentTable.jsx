@@ -1,20 +1,19 @@
 import styled from 'styled-components';
 
-// --- ESTILOS DO CONTAINER ---
 const ComponentWrapper = styled.div`
   font-family: 'Arial', sans-serif;
-  margin-bottom: 25px;
+  margin-bottom: 12px; /* Reduzido drasticamente para aproximar das fotos */
   page-break-inside: avoid;
-  border: 1px solid #cbd5e1; /* Borda sutil e moderna */
-  border-radius: 4px;
-  overflow: hidden; /* Mantém as bordas arredondadas limpas */
+  border: 1px solid #cbd5e1; 
+  border-radius: 6px; 
+  overflow: hidden; 
 `;
 
-// --- ESTILOS DOS DADOS DO EQUIPAMENTO (METADADOS) ---
 const HeaderTitle = styled.div`
-  background-color: #1f6fa8; /* Azul escuro profissional */
+  /* Aplicando o degradê semelhante à logo (Ciano para Verde Água) */
+  background: linear-gradient(90deg, #17d3d6 0%, #2bb5a3 100%);
   color: #ffffff;
-  padding: 8px 15px;
+  padding: 8px 12px; /* Reduzido para ganhar espaço vertical */
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
@@ -24,10 +23,10 @@ const HeaderTitle = styled.div`
 const InfoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: #f8fafc; /* Fundo cinza bem claro para destacar do papel branco */
-  padding: 12px 15px;
-  border-bottom: 1px solid #cbd5e1;
-  gap: 15px;
+  background-color: #f8fafc; 
+  padding: 8px 12px; /* Espaço mais justo */
+  border-bottom: 1px solid #e2e8f0; 
+  gap: 10px;
 `;
 
 const InfoBlock = styled.div`
@@ -40,7 +39,7 @@ const InfoLabel = styled.span`
   color: #64748b;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 `;
 
 const InfoValue = styled.span`
@@ -49,11 +48,9 @@ const InfoValue = styled.span`
   font-weight: bold;
 `;
 
-// --- ESTILOS DA TABELA DE MEDIÇÕES ---
 const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;
-  text-align: left;
 `;
 
 const ColumnHeaderRow = styled.tr`
@@ -61,15 +58,16 @@ const ColumnHeaderRow = styled.tr`
 `;
 
 const ColumnHeader = styled.th`
-  padding: 10px 15px;
+  padding: 8px 12px; /* Reduzido o espaço do cabeçalho */
   font-size: 10px;
-  color: #475569;
+  color: #64748b;
   text-transform: uppercase;
   border-bottom: 2px solid #e2e8f0;
+  text-align: ${(props) => props.$align || 'center'};
 `;
 
 const DataRow = styled.tr`
-  background-color: ${(props) => (props.$alt ? '#f1f5f9' : '#ffffff')};
+  background-color: ${(props) => (props.$alt ? '#f4f7f9' : '#ffffff')};
   border-bottom: 1px solid #e2e8f0;
   
   &:last-child {
@@ -78,9 +76,10 @@ const DataRow = styled.tr`
 `;
 
 const DataCell = styled.td`
-  padding: 8px 15px;
+  padding: 6px 12px; /* Ajuste crucial para compactar as linhas da tabela */
   font-size: 11px;
   color: ${(props) => props.$color || '#334155'};
+  text-align: ${(props) => props.$align || 'center'};
 `;
 
 const MainDescription = styled.strong`
@@ -89,17 +88,15 @@ const MainDescription = styled.strong`
 `;
 
 export const EquipmentTable = ({ equipment, metadata, measurements }) => {
-  // Função para determinar a cor. Valores negativos ficam em vermelho, resto padrão.
   const getValueColor = (value) => {
-    if (typeof value === 'string' && value.includes('-')) return '#dc2626'; // Vermelho moderno
-    return '#2563eb'; // Azul moderno
+    if (typeof value === 'string' && value.includes('-')) return '#dc2626';
+    return '#2bb5a3'; 
   };
 
   return (
     <ComponentWrapper>
-      
-      {/* 1. SEÇÃO DE METADADOS (Grid Moderno) */}
       <HeaderTitle>{equipment}</HeaderTitle>
+      
       <InfoGrid>
         <InfoBlock>
           <InfoLabel>Nº Série</InfoLabel>
@@ -119,11 +116,10 @@ export const EquipmentTable = ({ equipment, metadata, measurements }) => {
         </InfoBlock>
       </InfoGrid>
 
-      {/* 2. SEÇÃO DE MEDIÇÕES (Tabela Limpa) */}
       <StyledTable>
         <thead>
           <ColumnHeaderRow>
-            <ColumnHeader>Descrição</ColumnHeader>
+            <ColumnHeader $align="left">Descrição</ColumnHeader>
             <ColumnHeader>Medição Atual</ColumnHeader>
             <ColumnHeader>Valor Referência</ColumnHeader>
             <ColumnHeader>Status</ColumnHeader>
@@ -132,7 +128,7 @@ export const EquipmentTable = ({ equipment, metadata, measurements }) => {
         <tbody>
           {measurements.map((row, index) => (
             <DataRow key={index} $alt={index % 2 !== 0}>
-              <DataCell>
+              <DataCell $align="left">
                 <MainDescription>{row.description}</MainDescription>
               </DataCell>
               <DataCell $color={getValueColor(row.current)}>
@@ -141,12 +137,11 @@ export const EquipmentTable = ({ equipment, metadata, measurements }) => {
               <DataCell $color={getValueColor(row.reference)}>
                 {row.reference}
               </DataCell>
-              <DataCell $color="#2563eb">{row.status}</DataCell>
+              <DataCell $color="#2bb5a3">{row.status}</DataCell>
             </DataRow>
           ))}
         </tbody>
       </StyledTable>
-      
     </ComponentWrapper>
   );
 };
