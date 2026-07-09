@@ -9,8 +9,9 @@ import { DevicesTable } from '../components/DevicesTable';
 import { TeamSection } from '../components/TeamSection';
 import { IntroductionSection } from '../components/IntroductionSection';
 import { ScheduledServices } from '../components/ScheduledServices';
-import { OccurrenceSectionTitle, OccurrenceCard } from '../components/OccurrenceSection';
+import { OccurrenceSectionTitle, OccurrenceCard,TitleBox, TitleText, TitleContainer } from '../components/OccurrenceSection';
 import { GeneralConsiderations } from '../components/GeneralConsiderations';
+import { ImportantPointCard } from '../components/ImportantPointCard';
 
 // Novo componente de Índice importado
 import { ReportSummary } from '../components/ReportSummary';
@@ -229,6 +230,73 @@ export const ReportPage = () => {
         
         <ReportFooter page={`Página ${pageCounter++}`} />
       </A4Page>
+
+      <A4Page>
+        <ReportHeader />
+        
+        <div style={{ padding: '20px' }}>
+          <TitleBox><TitleText>Observações Importantes</TitleText></TitleBox>
+
+          <ImportantPointCard 
+            title="Disponibilidade"
+            text="No anexo registramos o gráfico de disponibilidade do sistema, tanto por painel como a disponibilidade geral." 
+          />
+          
+          <ImportantPointCard 
+            type="alert"
+            title="Atenção ao Equipamento TSW"
+            text="Conforme relatado anteriormente, o TSW ficou um período desligado no mês de junho/23, chamamos a atenção para a necessidade de verificação com frequência." 
+          />
+
+          <ImportantPointCard 
+            type="alert"
+            title="Necessidade de Acesso - Silos"
+            text="Realimentamos o módulo do SILOS, mas permanece status NO ANSWER. Precisamos do apoio da Bridgestone para providenciar acesso." 
+          />
+          
+          <ImportantPointCard 
+            type="alert"
+            title="Substituição de Base - 4:M1-116"
+            text="Necessária substituição da base do detector na subestação do Tandem. Aguardamos solução de acesso já comunicada ao Sr. Rafael." 
+          />
+
+          <ImportantPointCard 
+            title="Cronograma de Visitas"
+            text="As oito visitas do mês foram realizadas nos dias 04, 05, 06, 17, 18, 24, 25 e 26/02." 
+          />
+        </div>
+
+        <div style={{ marginTop: 'auto', textAlign: 'center', paddingBottom: '40px' }}>
+          <p style={{ fontSize: '12px', fontWeight: 'bold' }}>IGOR ANDRADE CASTRO</p>
+          <p style={{ fontSize: '11px' }}>RESPONSÁVEL TÉCNICO</p>
+          <p style={{ fontSize: '11px' }}>IBSYSTEMS ENGENHARIA LTDA</p>
+        </div>
+        
+        <ReportFooter page={`Página ${pageCounter++}`} />
+      </A4Page>
+
+      <A4Page>
+        <ReportHeader />
+        
+        <div style={{ padding: '20px' }}>
+          <TitleBox>
+            <TitleText>ANEXO I</TitleText>
+          </TitleBox>
+          
+          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+            <h2 style={{ fontSize: '16px', fontWeight: 'bold' }}>GRÁFICO DEMONSTRATIVO</h2>
+            <h2 style={{ fontSize: '16px', fontWeight: 'bold' }}>DISPONIBILIDADE</h2>
+          </div>
+
+          <AvailabilityCharts 
+            chart1Src="/imgs/anexo1/painel.jpg" 
+            chart2Src="/imgs/anexo1/geral.jpg" 
+          />
+        </div>
+        
+        <ReportFooter page={`Página ${pageCounter++}`} />
+      </A4Page>
+
     </ReportContainer>
   );
 };

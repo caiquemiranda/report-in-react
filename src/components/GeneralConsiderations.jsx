@@ -38,7 +38,10 @@ const TableWrapper = styled.div`
 
 const StyledTable = styled.table` width: 100%; border-collapse: collapse; `;
 
-const HeaderRow = styled.tr` background: #2bb5a3; `;
+const HeaderRow = styled.tr`
+  /* Substituímos a cor sólida pelo degradê padronizado */
+  background: linear-gradient(90deg, #17d3d6 0%, #2bb5a3 100%);
+`;
 
 const HeaderCell = styled.th`
   padding: 8px 10px;

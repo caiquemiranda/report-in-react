@@ -9,6 +9,15 @@ const TableWrapper = styled.div`
   page-break-inside: auto; /* Permite que a tabela quebre de página se for muito longa */
 `;
 
+const HeaderCell = styled.th`
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #ffffff;
+  text-transform: uppercase;
+  /* Adicione isto para alinhar conforme a necessidade */
+  text-align: ${(props) => props.$align || 'center'}; 
+`;
+
 const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;

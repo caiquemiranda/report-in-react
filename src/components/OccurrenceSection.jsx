@@ -93,13 +93,13 @@ export const DraggableImage = ({ src, alt }) => {
 // ==========================================
 // ESTILOS DE LAYOUT
 // ==========================================
-const TitleContainer = styled.div` margin-bottom: 20px; `;
+export const TitleContainer = styled.div` margin-bottom: 20px; `;
 
-const TitleBox = styled.div`
+export const TitleBox = styled.div`
   border: 3px solid #2bb5a3; padding: 8px; text-align: center; margin-bottom: 25px;
 `;
 
-const TitleText = styled.h2`
+export const TitleText = styled.h2`
   margin: 0; font-size: 16px; font-weight: bold; text-transform: uppercase; color: #000;
 `;
 
