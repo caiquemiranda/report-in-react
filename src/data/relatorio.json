@@ -257,5 +257,35 @@
       { "id": 4, "point": "3:SIG5", "node": 3, "event": "PNL03 - FABRICA A", "status": "OPEN CIRCUIT TROUBLE" },
       { "id": 5, "point": "4:M1-108-0", "node": 4, "event": "FONTE AUXILIAR - FABRICA A - PREDIO 48", "status": "Negative Earth Fault" }
     ]
+  },
+  "graficos": {
+    "disponibilidadePainel": [
+      { "nome": "PN-01", "valor": 99.7 },
+      { "nome": "PN-02", "valor": 98.0 },
+      { "nome": "PN-03", "valor": 96.5 },
+      { "nome": "PN-06", "valor": 98.6 },
+      { "nome": "PN-07", "valor": 100.0 },
+      { "nome": "PN-08", "valor": 99.0 },
+      { "nome": "PN-09", "valor": 97.5 },
+      { "nome": "PN-10", "valor": 99.0 },
+      { "nome": "PN-11", "valor": 99.0 },
+      { "nome": "PN-12", "valor": 99.0 },
+      { "nome": "PN-13", "valor": 99.0 },
+      { "nome": "PN-14", "valor": 99.0 },
+      { "nome": "PN-15", "valor": 99.0 },
+      { "nome": "PN-16", "valor": 99.0 },
+      { "nome": "PN-17", "valor": 99.0 },
+      { "nome": "PN-18", "valor": 99.0 },
+      { "nome": "PN-19", "valor": 99.0 },
+      { "nome": "PN-20", "valor": 99.0 }
+    ],
+    "disponibilidadeGeral": [
+      { "mes": "JAN", "valor": 99.0 },
+      { "mes": "FEV", "valor": 99.0 },
+      { "mes": "MAR", "valor": 99.0 },
+      { "mes": "ABR", "valor": 99.0 },
+      { "mes": "MAI", "valor": 99.0 },
+      { "mes": "JUN", "valor": 99.0 }
+    ]
   }
 }

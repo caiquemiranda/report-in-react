@@ -12,13 +12,22 @@ import { ScheduledServices } from '../components/ScheduledServices';
 import { OccurrenceSectionTitle, OccurrenceCard,TitleBox, TitleText, TitleContainer } from '../components/OccurrenceSection';
 import { GeneralConsiderations } from '../components/GeneralConsiderations';
 import { ImportantPointCard } from '../components/ImportantPointCard';
+import { AvailabilityCharts } from '../components/AvailabilityCharts';
 
 // Novo componente de Índice importado
 import { ReportSummary } from '../components/ReportSummary';
 
 import reportData from '../data/relatorio.json'; 
 
-const { indice, paineis, servicos, equipe, introducao, servicosProgramados, ocorrencias, consideracoesGerais } = reportData;
+const { indice, 
+  paineis, 
+  servicos, 
+  equipe, 
+  introducao, 
+  servicosProgramados, 
+  ocorrencias, 
+  consideracoesGerais,
+  graficos } = reportData;
 
 const ReportContainer = styled.div`
   display: flex;
@@ -289,8 +298,8 @@ export const ReportPage = () => {
           </div>
 
           <AvailabilityCharts 
-            chart1Src="/imgs/anexo1/painel.jpg" 
-            chart2Src="/imgs/anexo1/geral.jpg" 
+            dataPainel={graficos.disponibilidadePainel} 
+            dataGeral={graficos.disponibilidadeGeral} 
           />
         </div>
         
