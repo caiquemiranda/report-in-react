@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { ReportHeader } from '../components/ReportHeader';
 import { EquipmentTable } from '../components/EquipmentTable';
@@ -7,11 +6,15 @@ import { ReportObservations } from '../components/ReportObservations';
 import { ReportFooter } from '../components/ReportFooter';
 import { ServicesSection } from '../components/ServicesSection';
 import { DevicesTable } from '../components/DevicesTable';
+import { TeamSection } from '../components/TeamSection';
+import { IntroductionSection } from '../components/IntroductionSection';
 
 // Novo componente de Índice importado
 import { ReportSummary } from '../components/ReportSummary';
 
 import reportData from '../data/relatorio.json'; 
+
+const { indice, paineis, servicos, equipe, introducao } = reportData;
 
 const ReportContainer = styled.div`
   display: flex;
@@ -88,6 +91,7 @@ export const ReportPage = () => {
       
       {/* PÁGINA 1: CAPA */}
       <A4Page>
+        <ReportHeader />
         <PlaceholderBox>Capa do Relatório (A Desenvolver)</PlaceholderBox>
         {/* A capa geralmente não leva o cabeçalho/rodapé padrão */}
       </A4Page>
@@ -111,7 +115,8 @@ export const ReportPage = () => {
       {/* PÁGINA 4: EQUIPE ENVOLVIDA */}
       <A4Page>
         <ReportHeader />
-        <PlaceholderBox>Equipe Envolvida (A Desenvolver)</PlaceholderBox>
+        <IntroductionSection data={introducao} />
+        <TeamSection data={equipe} />
         <ReportFooter page={`Página ${pageCounter++}`} />
       </A4Page>
 

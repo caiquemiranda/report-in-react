@@ -1,6 +1,44 @@
 {
   "id": "relatorio-12345",
   "dataEmissao": "12/06/2020",
+  "equipe": {
+    "gerentes": [
+      "Igor Andrade Castro",
+      "Wilson Garcia de Sousa Filho"
+    ],
+    "escopo": "Prestação de serviços técnicos continuados de manutenção preventiva e corretiva do sistema de detecção e alarme de incêndio - SDAI.",
+    "dataRenovacao": "28/02/2025;",
+    "equipeTecnica": [
+      "Wilson G Sousa – Técnico de Sistemas",
+      "Kauan Monteiro – Técnico de Sistemas",
+      "Rodrigo Cunha – Técnico de Sistemas",
+      "Silas Santos – Auxiliar Técnico"
+    ],
+    "contatos": [
+      {
+        "cargo": "Contato Líder Técnico",
+        "nome": "Caique da Silva Miranda Santos",
+        "email": "caique.santos@ibsystems.com.br"
+      },
+      {
+        "cargo": "Contato Técnico / Operacional",
+        "nome": "Wilson Garcia de Sousa Filho",
+        "email": "wilson.g.sousa@ibsystems.com.br"
+      },
+      {
+        "cargo": "Contato Adm / Comercial",
+        "nome": "Igor Andrade Castro",
+        "email": "igor.castro@ibsystems.com.br"
+      }
+    ]
+  },
+  "introducao": {
+    "paragrafos": [
+      "Este relatório tem por objetivo informar sobre os serviços executados pela IBSystems, nas dependências da Bridgestone - Camaçari, conforme Termo de Contrato em vigor de Nº CLM-4221, no mês de fevereiro de 2025.",
+      "É de responsabilidade da equipe da IBSystems a prestação de serviços técnicos continuados de manutenção preventiva e corretiva no sistema de detecção e alarme de incêndio (SDAI) da fábrica.",
+      "São declaradas neste relatório as ocorrências mais significativas ocorrida no mês de fevereiro de 2025. Também são relatadas as providências tomadas para a correção dos fatos e os equipamentos que estão parados ou parcialmente parados, deixando clara a situação encontrada e a sua evolução em cada mês de trabalho. Na conclusão, a situação das instalações é declarada e são informadas as ações tomadas para continuidade equilibrada da operação do sistema."
+    ]
+  },
   "indice": [
     { "titulo": "INTRODUÇÃO", "pagina": 3, "level": 1 },
     { "titulo": "EQUIPE ENVOLVIDA", "pagina": 4, "level": 1 },
