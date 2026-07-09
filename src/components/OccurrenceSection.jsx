@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const SectionWrapper = styled.div`
@@ -49,6 +48,15 @@ const ImagesGrid = styled.div`
 const MainImage = styled.img` width: 100%; border: 1px solid #ddd; `;
 const ThumbContainer = styled.div` display: flex; gap: 10px; `;
 const Thumb = styled.img` width: 48%; border: 1px solid #ddd; `;
+
+export const OccurrenceSectionTitle = ({ data }) => (
+  <div style={{ marginBottom: '20px' }}>
+    <div style={{ border: '3px solid #2bb5a3', padding: '8px', textAlign: 'center', marginBottom: '25px' }}>
+      <h2 style={{ margin: 0, fontSize: '16px', textTransform: 'uppercase' }}>Ocorrências Relevantes</h2>
+    </div>
+    <p style={{ fontSize: '13px', textAlign: 'justify' }}>{data.introducao}</p>
+  </div>
+);
 
 export const OccurrenceSection = ({ data }) => (
   <SectionWrapper>

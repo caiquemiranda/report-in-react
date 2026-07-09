@@ -9,7 +9,8 @@ import { DevicesTable } from '../components/DevicesTable';
 import { TeamSection } from '../components/TeamSection';
 import { IntroductionSection } from '../components/IntroductionSection';
 import { ScheduledServices } from '../components/ScheduledServices';
-import { OccurrenceSection } from '../components/OccurrenceSection';
+import { OccurrenceSection, OccurrenceSectionTitle } from '../components/OccurrenceSection';
+import { OccurrenceCard } from '../components/OccurrenceCard';
 
 // Novo componente de Índice importado
 import { ReportSummary } from '../components/ReportSummary';
@@ -162,12 +163,23 @@ export const ReportPage = () => {
         <ReportFooter page={`Página ${pageCounter++}`} />
       </A4Page>
 
-      {/* PÁGINA 9: OCORRÊNCIAS RELEVANTES */}
+      {/* PÁGINA 9 E SEGUINTES: OCORRÊNCIAS RELEVANTES */}
       <A4Page>
         <ReportHeader />
-        <OccurrenceSection data={ocorrencias} />
+        
+        {/* 1. Título e Introdução fixos no topo */}
+        <OccurrenceSectionTitle data={ocorrencias} />
+        
+        {/* 2. Mapeamento dos Cards de Atendimento */}
+        <div style={{ flexGrow: 1 }}>
+          {ocorrencias?.atendimentos?.map((oc) => (
+            <OccurrenceCard key={oc.id} oc={oc} />
+          ))}
+        </div>
+        
         <ReportFooter page={`Página ${pageCounter++}`} />
       </A4Page>
+
 
     </ReportContainer>
   );
