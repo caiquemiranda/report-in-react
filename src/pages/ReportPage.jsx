@@ -8,13 +8,15 @@ import { ServicesSection } from '../components/ServicesSection';
 import { DevicesTable } from '../components/DevicesTable';
 import { TeamSection } from '../components/TeamSection';
 import { IntroductionSection } from '../components/IntroductionSection';
+import { ScheduledServices } from '../components/ScheduledServices';
+import { OccurrenceSection } from '../components/OccurrenceSection';
 
 // Novo componente de Índice importado
 import { ReportSummary } from '../components/ReportSummary';
 
 import reportData from '../data/relatorio.json'; 
 
-const { indice, paineis, servicos, equipe, introducao } = reportData;
+const { indice, paineis, servicos, equipe, introducao, servicosProgramados, ocorrencias } = reportData;
 
 const ReportContainer = styled.div`
   display: flex;
@@ -153,6 +155,19 @@ export const ReportPage = () => {
           </A4Page>
         );
       })}
+      {/* PÁGINA 8: SERVIÇOS PROGRAMADOS */}
+      <A4Page>
+        <ReportHeader />
+        <ScheduledServices data={servicosProgramados} />
+        <ReportFooter page={`Página ${pageCounter++}`} />
+      </A4Page>
+
+      {/* PÁGINA 9: OCORRÊNCIAS RELEVANTES */}
+      <A4Page>
+        <ReportHeader />
+        <OccurrenceSection data={ocorrencias} />
+        <ReportFooter page={`Página ${pageCounter++}`} />
+      </A4Page>
 
     </ReportContainer>
   );

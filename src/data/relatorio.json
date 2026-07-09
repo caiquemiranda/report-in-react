@@ -93,6 +93,27 @@
       ],
       "images": { "img1": "/imgs/pn-05/foto1.png", "img2": "/imgs/pn-05/foto2.png" },
       "observations": "Painel em perfeito estado de funcionamento."
+    },
+    {
+      "equipment": "SIMPLEX 4010ES / PN-06",
+      "metadata": {
+        "serial": "PN-05",
+        "area": "FABRICA B",
+        "manufacturer": "Simplex",
+        "model": "4010ES"
+      },
+      "measurements": [
+        { "description": "Tensão Laço Detecção 01", "current": "29,5 Vcc", "reference": "24 Vcc ≤ X ≤ 30 Vcc", "status": "Em Conformidade" },
+        { "description": "Tensão Baterias", "current": "26,8 Vcc", "reference": "X ≥ 24,1 Vcc", "status": "Em Conformidade" },
+        { "description": "Tensão Saída Auxiliar", "current": "28,0 Vcc", "reference": "X ≥ 24,1 Vcc", "status": "Em Conformidade" },
+        { "description": "Tensão NAC 01", "current": "-24,1 Vcc", "reference": "X ≥ -30 Vcc", "status": "Em Conformidade" },
+        { "description": "Tensão NAC 02", "current": "-24,3 Vcc", "reference": "X ≥ -30 Vcc", "status": "Em Conformidade" },
+        { "description": "Tensão NAC 03", "current": "-23,9 Vcc", "reference": "X ≥ -30 Vcc", "status": "Em Conformidade" },
+        { "description": "Tensão NAC 04", "current": "-24,0 Vcc", "reference": "X ≥ -30 Vcc", "status": "Em Conformidade" },
+        { "description": "Tensão alimentação AC", "current": "219 Vac", "reference": "198 Vac ≤ X ≥ 242 Vac", "status": "Em Conformidade" }
+      ],
+      "images": { "img1": "/imgs/pn-05/foto1.png", "img2": "/imgs/pn-05/foto2.png" },
+      "observations": "Painel em perfeito estado de funcionamento."
     }
   ],
   "servicos": {
@@ -132,5 +153,30 @@
       { "numero": 29, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" },
       { "numero": 30, "point": "2:M1-118-0", "node": "2", "local": "FABRICA B - PIT PRENSA - NA - DT09", "vc": "", "data": "24/fev" }
   ]
- }
+ },
+ "servicosProgramados": {
+    "titulo": "SERVIÇOS PROGRAMADOS – FEVEREIRO 2024",
+    "introducao": "Para fevereiro temos programado as seguintes manutenções preventivas:",
+    "itens": [
+      "PN01 - Detectores de Fumaça",
+      "PN01 - Detectores de Temperatura"
+    ]
+  },
+  "ocorrencias": {
+    "introducao": "No mês de fevereiro 2025 ocorreram alguns fatos significativos em relação aos sistemas atendidos que geraram serviços corretivos. Abaixo temos um breve relato de cada atendimento corretivo.",
+    "atendimentos": [
+      {
+        "id": "217",
+        "local": "PIT PRENSAS",
+        "requisitante": "Rafael Souza",
+        "tipo": "Corretiva",
+        "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
+        "imgs": [
+          "/imgs/oc-217/sistema.png",
+          "/imgs/oc-217/foto1.png",
+          "/imgs/oc-217/foto2.png"
+        ]
+      }
+    ]
+  }
 }
