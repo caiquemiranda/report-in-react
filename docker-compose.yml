@@ -1,0 +1,11 @@
+services:
+  frontend:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - /app/node_modules # Evita conflitos com o seu sistema operacional
+    ports:
+      - "5173:5173"
+    # Ajustado para o Vite 8 usando a flag oficial `--host`
+    command: sh -c "npm install && npm run dev -- --host"
