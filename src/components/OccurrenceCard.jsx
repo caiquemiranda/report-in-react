@@ -8,7 +8,7 @@ const CardWrapper = styled.div`
 `;
 
 const TextSection = styled.div` 
-  margin-bottom: 20px; 
+  margin-bottom: 10px; 
   font-size: 13px;
   line-height: 1.5; 
 `;
@@ -25,7 +25,7 @@ const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: repeat(2, 1fr);    
-  gap: 8px; /* Espaço um pouco maior entre as fotos para dar respiro */
+  gap: 1px; /* Espaço um pouco maior entre as fotos para dar respiro */
   flex-grow: 1;
 `;
 
@@ -33,8 +33,8 @@ const Photo = styled.img`
   width: 100%;
   height: 150px; /* Definimos uma altura fixa para que as 6 fotos fiquem uniformes */
   object-fit: cover; 
-  border: 1px solid #cbd5e1; /* Borda mais suave e profissional */
-  border-radius: 4px; /* Cantos levemente arredondados */
+  border: 2px solid #cbd5e1; /* Borda mais suave e profissional */
+  border-radius: 8px; /* Cantos levemente arredondados */
 `;
 
 export const OccurrenceCard = ({ oc }) => (

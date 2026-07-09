@@ -161,87 +161,101 @@
       "PN01 - Detectores de Fumaça",
       "PN01 - Detectores de Temperatura"
     ]
-  },
-  "ocorrencias": {
-    "introducao": "No mês de fevereiro 2025 ocorreram alguns fatos significativos em relação aos sistemas atendidos que geraram serviços corretivos. Abaixo temos um breve relato de cada atendimento corretivo.",
+  },"ocorrencias": {
+    "introducao": "No mês de fevereiro 2025 ocorreram alguns fatos significativos em relação aos sistemas atendidos que geraram serviços corretivos. Abaixo temos um breve relato de cada atendimento corretivo.No mês de fevereiro 2025 ocorreram alguns fatos significativos em relação aos sistemas atendidos que geraram serviços corretivos. Abaixo temos um breve relato de cada atendimento corretivo.No mês de fevereiro 2025 ocorreram alguns fatos significativos em relação aos sistemas atendidos que geraram serviços corretivos. Abaixo temos um breve relato de cada atendimento corretivo.",
     "atendimentos": [
       {
         "id": "226",
         "local": "PIT PRENSAS",
         "requisitante": "Rafael Souza",
         "tipo": "Corretiva",
-        "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
+        "descricao": "Cras mattis hac inceptos curabitur vehicula est augue cum ultrices platea quam magna justo viverra lacus commodo sollicitudin cum bibendum pretium blandit suspendisse dignissim pharetra parturient facilisi tristique natoque nascetur porta amet torquent ultricies arcu aliquam dictum accumsan sociosqu id fermentum lacinia enim rhoncus consequat malesuada porttitor interdum nostra tortor torquent commodo molestie nunc consectetur urna aptent at iaculis per habitasse sem sodales libero ac sodales convallis urna platea ridiculus sit magna sem sagittis mus rhoncus netus semper dignissim rutrum.",
         "imgs": [
-          "/imgs/occurrence/oc-226/foto1.jpg", "/imgs/occurrence/oc-226/foto2.jpg", "/imgs/occurrence/oc-226/foto3.jpg",
-          "/imgs/occurrence/oc-226/foto4.jpg", "/imgs/occurrence/oc-226/foto5.jpg", "/imgs/occurrence/oc-226/foto6.jpg"
+          "/imgs/occurrence/oc-226/foto1.png", "/imgs/occurrence/oc-226/foto2.png", "/imgs/occurrence/oc-226/foto3.png"
         ]
       },
-            {
+      {
         "id": "218",
         "local": "PIT PRENSAS",
         "requisitante": "Rafael Souza",
         "tipo": "Corretiva",
-        "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
+        "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido., Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de  foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
         "imgs": [
-          "/imgs/occurrence/oc-226/foto1.jpg", "/imgs/occurrence/oc-226/foto2.jpg", "/imgs/occurrence/oc-226/foto3.jpg",
-          "/imgs/occurrence/oc-226/foto4.jpg", "/imgs/occurrence/oc-226/foto5.jpg", "/imgs/occurrence/oc-226/foto6.jpg"
+          "/imgs/occurrence/oc-226/foto1.png", "/imgs/occurrence/oc-226/foto2.png", "/imgs/occurrence/oc-226/foto3.png",
+          "/imgs/occurrence/oc-226/foto4.png", "/imgs/occurrence/oc-226/foto5.png", "/imgs/occurrence/oc-226/foto6.png"
         ]
       },
-            {
+      {
         "id": "219",
         "local": "PIT PRENSAS",
         "requisitante": "Rafael Souza",
         "tipo": "Corretiva",
-        "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
+        "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido., Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de ",
         "imgs": [
-          "/imgs/occurrence/oc-226/foto1.jpg", "/imgs/occurrence/oc-226/foto2.jpg", "/imgs/occurrence/oc-226/foto3.jpg",
-          "/imgs/occurrence/oc-226/foto4.jpg", "/imgs/occurrence/oc-226/foto5.jpg", "/imgs/occurrence/oc-226/foto6.jpg"
+          "/imgs/occurrence/oc-226/foto1.png", "/imgs/occurrence/oc-226/foto2.png", "/imgs/occurrence/oc-226/foto3.png",
+          "/imgs/occurrence/oc-226/foto4.png", "/imgs/occurrence/oc-226/foto5.png", "/imgs/occurrence/oc-226/foto6.png"
         ]
       },
-            {
+      {
         "id": "220",
         "local": "PIT PRENSAS",
         "requisitante": "Rafael Souza",
         "tipo": "Corretiva",
         "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
         "imgs": [
-          "/imgs/occurrence/oc-226/foto1.jpg", "/imgs/occurrence/oc-226/foto2.jpg", "/imgs/occurrence/oc-226/foto3.jpg",
-          "/imgs/occurrence/oc-226/foto4.jpg", "/imgs/occurrence/oc-226/foto5.jpg", "/imgs/occurrence/oc-226/foto6.jpg"
+          "/imgs/occurrence/oc-226/foto1.png", "/imgs/occurrence/oc-226/foto2.png", "/imgs/occurrence/oc-226/foto3.png",
+          "/imgs/occurrence/oc-226/foto4.png", "/imgs/occurrence/oc-226/foto5.png", "/imgs/occurrence/oc-226/foto6.png"
         ]
       },
-            {
-        "id": "217",
+      {
+        "id": "217-A",
         "local": "PIT PRENSAS",
         "requisitante": "Rafael Souza",
         "tipo": "Corretiva",
         "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
         "imgs": [
-          "/imgs/occurrence/oc-226/foto1.jpg", "/imgs/occurrence/oc-226/foto2.jpg", "/imgs/occurrence/oc-226/foto3.jpg",
-          "/imgs/occurrence/oc-226/foto4.jpg", "/imgs/occurrence/oc-226/foto5.jpg", "/imgs/occurrence/oc-226/foto6.jpg"
+          "/imgs/occurrence/oc-226/foto1.png", "/imgs/occurrence/oc-226/foto2.png", "/imgs/occurrence/oc-226/foto3.png",
+          "/imgs/occurrence/oc-226/foto4.png", "/imgs/occurrence/oc-226/foto5.png", "/imgs/occurrence/oc-226/foto6.png"
         ]
       },
-            {
-        "id": "217",
+      {
+        "id": "217-B",
         "local": "PIT PRENSAS",
         "requisitante": "Rafael Souza",
         "tipo": "Corretiva",
-        "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
+        "descricao": "Rhoncus dui tempus urna pellentesque est dui scelerisque congue hac posuere fusce purus nibh primis porttitor erat tristique litora libero vel lacinia malesuada ante potenti vel habitant vel faucibus pulvinar feugiat nunc penatibus tristique venenatis odio morbi platea vel taciti montes potenti id scelerisque erat metus lacinia etiam lacus maecenas pulvinar tristique sed volutpat consectetur curae dui quis parturient fames curabitur lobortis cubilia adipiscing risus orci feugiat tempor faucibus ut mi fringilla malesuada taciti primis id magna etiam consequat curabitur rutrum mi netus montes cubilia elementum vestibulum pellentesque tortor tincidunt fermentum mauris litora dictum quisque a rutrum congue elementum et.",
         "imgs": [
-          "/imgs/occurrence/oc-226/foto1.jpg", "/imgs/occurrence/oc-226/foto2.jpg", "/imgs/occurrence/oc-226/foto3.jpg",
-          "/imgs/occurrence/oc-226/foto4.jpg", "/imgs/occurrence/oc-226/foto5.jpg", "/imgs/occurrence/oc-226/foto6.jpg"
+          "/imgs/occurrence/oc-226/foto1.png", "/imgs/occurrence/oc-226/foto2.png", "/imgs/occurrence/oc-226/foto3.png",
+          "/imgs/occurrence/oc-226/foto4.png", "/imgs/occurrence/oc-226/foto5.png", "/imgs/occurrence/oc-226/foto6.png"
         ]
       },
-            {
-        "id": "217",
+      {
+        "id": "217-C",
         "local": "PIT PRENSAS",
         "requisitante": "Rafael Souza",
         "tipo": "Corretiva",
-        "descricao": "Correção da queda do laço [NODE02], durante inspeção no Pit Prensas, foi identificado um cabo partido no dispositivo [N2-M1-116], causando a queda de parte do laço [NODE-02]. O problema foi resolvido e o laço restabelecido.",
+        "descricao": "Cras mattis hac inceptos curabitur vehicula est augue cum ultrices platea quam magna justo viverra lacus commodo sollicitudin cum bibendum pretium blandit suspendisse dignissim pharetra parturient facilisi tristique natoque nascetur porta amet torquent ultricies arcu aliquam dictum accumsan sociosqu id fermentum lacinia enim rhoncus consequat malesuada porttitor interdum nostra tortor torquent commodo molestie nunc consectetur urna aptent at iaculis per habitasse sem sodales libero ac sodales convallis urna platea ridiculus sit magna sem sagittis mus rhoncus netus semper dignissim rutrum.",
         "imgs": [
-          "/imgs/occurrence/oc-226/foto1.jpg", "/imgs/occurrence/oc-226/foto2.jpg", "/imgs/occurrence/oc-226/foto3.jpg",
-          "/imgs/occurrence/oc-226/foto4.jpg", "/imgs/occurrence/oc-226/foto5.jpg", "/imgs/occurrence/oc-226/foto6.jpg"
+          "/imgs/occurrence/oc-226/foto1.png", "/imgs/occurrence/oc-226/foto2.png", "/imgs/occurrence/oc-226/foto3.png",
+          "/imgs/occurrence/oc-226/foto4.png", "/imgs/occurrence/oc-226/foto5.png", "/imgs/occurrence/oc-226/foto6.png"
         ]
       }
+    ]
+  },
+  "consideracoesGerais": {
+    "tabelaInicial": [
+      { "id": 1, "point": "P511", "node": 9, "event": "POINTS IN INSTALL MODE", "status": "ABNORMAL" },
+      { "id": 2, "point": "4:M1-33-0", "node": 4, "event": "PN05 - FABRICA A - 4009 NAC", "status": "4009A Battery Fault" },
+      { "id": 3, "point": "2:M1-14-0", "node": 2, "event": "PAINEL 4009 PN9", "status": "Negative Earth Fault" },
+      { "id": 4, "point": "4:M1-108-0", "node": 4, "event": "FONTE AUXILIAR - FABRICA A - PREDIO 48", "status": "Negative Earth Fault" },
+      { "id": 5, "point": "2:M1-104-0", "node": 2, "event": "FABRICA B - SPRINKLERS ACIONADO – AV21", "status": "NO ANSWER" }
+    ],
+    "tabelaFinal": [
+      { "id": 1, "point": "P511", "node": 9, "event": "POINTS IN INSTALL MODE", "status": "ABNORMAL" },
+      { "id": 2, "point": "4:M1-33-0", "node": 4, "event": "PN05 - FABRICA A - 4009 NAC", "status": "4009A Battery Fault" },
+      { "id": 3, "point": "2:M1-14-0", "node": 2, "event": "PAINEL 4009 PN9", "status": "Negative Earth Fault" },
+      { "id": 4, "point": "3:SIG5", "node": 3, "event": "PNL03 - FABRICA A", "status": "OPEN CIRCUIT TROUBLE" },
+      { "id": 5, "point": "4:M1-108-0", "node": 4, "event": "FONTE AUXILIAR - FABRICA A - PREDIO 48", "status": "Negative Earth Fault" }
     ]
   }
 }

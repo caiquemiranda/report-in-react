@@ -9,15 +9,15 @@ import { DevicesTable } from '../components/DevicesTable';
 import { TeamSection } from '../components/TeamSection';
 import { IntroductionSection } from '../components/IntroductionSection';
 import { ScheduledServices } from '../components/ScheduledServices';
-import { OccurrenceSection, OccurrenceSectionTitle } from '../components/OccurrenceSection';
-import { OccurrenceCard } from '../components/OccurrenceCard';
+import { OccurrenceSectionTitle, OccurrenceCard } from '../components/OccurrenceSection';
+import { GeneralConsiderations } from '../components/GeneralConsiderations';
 
 // Novo componente de Índice importado
 import { ReportSummary } from '../components/ReportSummary';
 
 import reportData from '../data/relatorio.json'; 
 
-const { indice, paineis, servicos, equipe, introducao, servicosProgramados, ocorrencias } = reportData;
+const { indice, paineis, servicos, equipe, introducao, servicosProgramados, ocorrencias, consideracoesGerais } = reportData;
 
 const ReportContainer = styled.div`
   display: flex;
@@ -69,11 +69,14 @@ const PlaceholderBox = styled.div`
 `;
 
 export const ReportPage = () => {
-  const { indice, paineis, servicos } = reportData;
+  // 1. Extraímos TODOS os dados de uma vez só
+  const { indice, paineis, servicos, equipe, introducao, servicosProgramados, ocorrencias } = reportData;
   let pageCounter = 1;
 
-  // Lógica da tabela de serviços (mantida)
-  const devices = servicos.dispositivosTestados || [];
+  // ==========================================
+  // LÓGICA 1: Paginação da Tabela de Dispositivos
+  // ==========================================
+  const devices = servicos?.dispositivosTestados || [];
   const FIRST_PAGE_LIMIT = 21; 
   const NEXT_PAGES_LIMIT = 35; 
   const servicePages = [];
@@ -88,6 +91,31 @@ export const ReportPage = () => {
       remaining = remaining.slice(NEXT_PAGES_LIMIT);
     }
   }
+
+  // ==========================================
+  // LÓGICA 2: Paginação das Ocorrências (6 Fotos)
+  // ==========================================
+  const paginateOccurrences = (atendimentos) => {
+    if (!atendimentos) return [];
+    const pages = [];
+    
+    atendimentos.forEach(oc => {
+      const imgs = oc.imgs || [];
+      if (imgs.length === 0) {
+        pages.push({ ...oc, imgsChunk: [], isContinuation: false });
+      } else {
+        // Corta as imagens de 6 em 6
+        for (let i = 0; i < imgs.length; i += 6) {
+          pages.push({
+            ...oc,
+            imgsChunk: imgs.slice(i, i + 6), // Pega apenas até 6 imagens por vez
+            isContinuation: i > 0 // Se i > 0, é a continuação do mesmo atendimento
+          });
+        }
+      }
+    });
+    return pages;
+  };
 
   return (
     <ReportContainer>
@@ -163,24 +191,44 @@ export const ReportPage = () => {
         <ReportFooter page={`Página ${pageCounter++}`} />
       </A4Page>
 
-      {/* PÁGINA 9 E SEGUINTES: OCORRÊNCIAS RELEVANTES */}
+      {/* PÁGINA 9 E SEGUINTES: OCORRÊNCIAS DINÂMICAS */}
+      {paginateOccurrences(ocorrencias?.atendimentos).map((pageData, index) => {
+        const currentPage = pageCounter++;
+        return (
+          <A4Page key={`${pageData.id}-${index}`}>
+            <ReportHeader />
+            
+            {/* O Título "Ocorrências Relevantes" SÓ aparece na primeira página */}
+            {index === 0 && <OccurrenceSectionTitle data={ocorrencias} />}
+            
+            {/* Passamos os dados fatiados para o Card */}
+            <OccurrenceCard oc={pageData} />
+            
+            <ReportFooter page={`Página ${currentPage}`} />
+          </A4Page>
+        );
+      })}
+
       <A4Page>
         <ReportHeader />
         
-        {/* 1. Título e Introdução fixos no topo */}
-        <OccurrenceSectionTitle data={ocorrencias} />
-        
-        {/* 2. Mapeamento dos Cards de Atendimento */}
-        <div style={{ flexGrow: 1 }}>
-          {ocorrencias?.atendimentos?.map((oc) => (
-            <OccurrenceCard key={oc.id} oc={oc} />
-          ))}
-        </div>
+        {/* Primeira tabela de considerações */}
+        <GeneralConsiderations 
+          title="Considerações Gerais"
+          text="Geramos relatório inicial de todos os troubles pré-existentes no mês de janeiro, demos início ao mês com 41 troubles. Segue abaixo tabela com essa relação:"
+          headers={['Nº', 'Point', 'Node', 'Event', 'Status']}
+          data={consideracoesGerais.tabelaInicial.map(item => [item.id, item.point, item.node, item.event, item.status])}
+        />
+
+        {/* Segunda parte com texto e tabela de 12 troubles */}
+        <GeneralConsiderations 
+          text="Após nossa atuação terminamos o mês com 12 troubles. Em fevereiro devemos continuar a busca por redução dos troubles, segue abaixo tabela com os troubles deixados no final do atendimento técnico:"
+          headers={['Nº', 'Point', 'Node', 'Event', 'Status']}
+          data={consideracoesGerais.tabelaFinal.map(item => [item.id, item.point, item.node, item.event, item.status])}
+        />
         
         <ReportFooter page={`Página ${pageCounter++}`} />
       </A4Page>
-
-
     </ReportContainer>
   );
 };
