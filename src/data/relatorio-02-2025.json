@@ -243,6 +243,8 @@
     ]
   },
   "consideracoesGerais": {
+    "textoInicial": "Geramos relatório inicial de todos os troubles pré-existentes no mês de janeiro, demos início ao mês com 41 troubles. Segue abaixo tabela com essa relação:",
+    "textoFinal": "Após nossa atuação terminamos o mês com 12 troubles. Em fevereiro devemos continuar a busca por redução dos troubles, segue abaixo tabela com os troubles deixados no final do atendimento técnico:",
     "tabelaInicial": [
       { "id": 1, "point": "P511", "node": 9, "event": "POINTS IN INSTALL MODE", "status": "ABNORMAL" },
       { "id": 2, "point": "4:M1-33-0", "node": 4, "event": "PN05 - FABRICA A - 4009 NAC", "status": "4009A Battery Fault" },
@@ -257,6 +259,36 @@
       { "id": 4, "point": "3:SIG5", "node": 3, "event": "PNL03 - FABRICA A", "status": "OPEN CIRCUIT TROUBLE" },
       { "id": 5, "point": "4:M1-108-0", "node": 4, "event": "FONTE AUXILIAR - FABRICA A - PREDIO 48", "status": "Negative Earth Fault" }
     ]
+  },
+  "observacoesImportantes": [
+    {
+      "title": "Disponibilidade",
+      "text": "No anexo registramos o gráfico de disponibilidade do sistema, tanto por painel como a disponibilidade geral."
+    },
+    {
+      "type": "alert",
+      "title": "Atenção ao Equipamento TSW",
+      "text": "Conforme relatado anteriormente, o TSW ficou um período desligado no mês de junho/23, chamamos a atenção para a necessidade de verificação com frequência."
+    },
+    {
+      "type": "alert",
+      "title": "Necessidade de Acesso - Silos",
+      "text": "Realimentamos o módulo do SILOS, mas permanece status NO ANSWER. Precisamos do apoio da Bridgestone para providenciar acesso."
+    },
+    {
+      "type": "alert",
+      "title": "Substituição de Base - 4:M1-116",
+      "text": "Necessária substituição da base do detector na subestação do Tandem. Aguardamos solução de acesso já comunicada ao Sr. Rafael."
+    },
+    {
+      "title": "Cronograma de Visitas",
+      "text": "As oito visitas do mês foram realizadas nos dias 04, 05, 06, 17, 18, 24, 25 e 26/02."
+    }
+  ],
+  "responsavelTecnico": {
+    "nome": "IGOR ANDRADE CASTRO",
+    "cargo": "RESPONSÁVEL TÉCNICO",
+    "empresa": "IBSYSTEMS ENGENHARIA LTDA"
   },
   "graficos": {
     "disponibilidadePainel": [

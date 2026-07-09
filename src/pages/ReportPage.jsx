@@ -17,18 +17,6 @@ import { AvailabilityCharts } from '../components/AvailabilityCharts';
 // Novo componente de Índice importado
 import { ReportSummary } from '../components/ReportSummary';
 
-import reportData from '../data/relatorio.json'; 
-
-const { indice, 
-  paineis, 
-  servicos, 
-  equipe, 
-  introducao, 
-  servicosProgramados, 
-  ocorrencias, 
-  consideracoesGerais,
-  graficos } = reportData;
-
 const ReportContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,9 +66,21 @@ const PlaceholderBox = styled.div`
   font-weight: bold;
 `;
 
-export const ReportPage = () => {
-  // 1. Extraímos TODOS os dados de uma vez só
-  const { indice, paineis, servicos, equipe, introducao, servicosProgramados, ocorrencias } = reportData;
+export const ReportPage = ({ data }) => {
+  // Extraímos TODOS os dados de uma vez só, a partir do relatório selecionado
+  const {
+    indice,
+    paineis,
+    servicos,
+    equipe,
+    introducao,
+    servicosProgramados,
+    ocorrencias,
+    consideracoesGerais,
+    observacoesImportantes,
+    responsavelTecnico,
+    graficos,
+  } = data;
   let pageCounter = 1;
 
   // ==========================================
@@ -223,16 +223,16 @@ export const ReportPage = () => {
         <ReportHeader />
         
         {/* Primeira tabela de considerações */}
-        <GeneralConsiderations 
+        <GeneralConsiderations
           title="Considerações Gerais"
-          text="Geramos relatório inicial de todos os troubles pré-existentes no mês de janeiro, demos início ao mês com 41 troubles. Segue abaixo tabela com essa relação:"
+          text={consideracoesGerais.textoInicial}
           headers={['Nº', 'Point', 'Node', 'Event', 'Status']}
           data={consideracoesGerais.tabelaInicial.map(item => [item.id, item.point, item.node, item.event, item.status])}
         />
 
         {/* Segunda parte com texto e tabela de 12 troubles */}
-        <GeneralConsiderations 
-          text="Após nossa atuação terminamos o mês com 12 troubles. Em fevereiro devemos continuar a busca por redução dos troubles, segue abaixo tabela com os troubles deixados no final do atendimento técnico:"
+        <GeneralConsiderations
+          text={consideracoesGerais.textoFinal}
           headers={['Nº', 'Point', 'Node', 'Event', 'Status']}
           data={consideracoesGerais.tabelaFinal.map(item => [item.id, item.point, item.node, item.event, item.status])}
         />
@@ -246,39 +246,20 @@ export const ReportPage = () => {
         <div style={{ padding: '20px' }}>
           <TitleBox><TitleText>Observações Importantes</TitleText></TitleBox>
 
-          <ImportantPointCard 
-            title="Disponibilidade"
-            text="No anexo registramos o gráfico de disponibilidade do sistema, tanto por painel como a disponibilidade geral." 
-          />
-          
-          <ImportantPointCard 
-            type="alert"
-            title="Atenção ao Equipamento TSW"
-            text="Conforme relatado anteriormente, o TSW ficou um período desligado no mês de junho/23, chamamos a atenção para a necessidade de verificação com frequência." 
-          />
-
-          <ImportantPointCard 
-            type="alert"
-            title="Necessidade de Acesso - Silos"
-            text="Realimentamos o módulo do SILOS, mas permanece status NO ANSWER. Precisamos do apoio da Bridgestone para providenciar acesso." 
-          />
-          
-          <ImportantPointCard 
-            type="alert"
-            title="Substituição de Base - 4:M1-116"
-            text="Necessária substituição da base do detector na subestação do Tandem. Aguardamos solução de acesso já comunicada ao Sr. Rafael." 
-          />
-
-          <ImportantPointCard 
-            title="Cronograma de Visitas"
-            text="As oito visitas do mês foram realizadas nos dias 04, 05, 06, 17, 18, 24, 25 e 26/02." 
-          />
+          {observacoesImportantes.map((ponto, index) => (
+            <ImportantPointCard
+              key={index}
+              type={ponto.type}
+              title={ponto.title}
+              text={ponto.text}
+            />
+          ))}
         </div>
 
         <div style={{ marginTop: 'auto', textAlign: 'center', paddingBottom: '40px' }}>
-          <p style={{ fontSize: '12px', fontWeight: 'bold' }}>IGOR ANDRADE CASTRO</p>
-          <p style={{ fontSize: '11px' }}>RESPONSÁVEL TÉCNICO</p>
-          <p style={{ fontSize: '11px' }}>IBSYSTEMS ENGENHARIA LTDA</p>
+          <p style={{ fontSize: '12px', fontWeight: 'bold' }}>{responsavelTecnico.nome}</p>
+          <p style={{ fontSize: '11px' }}>{responsavelTecnico.cargo}</p>
+          <p style={{ fontSize: '11px' }}>{responsavelTecnico.empresa}</p>
         </div>
         
         <ReportFooter page={`Página ${pageCounter++}`} />
